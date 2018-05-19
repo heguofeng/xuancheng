@@ -1,0 +1,291 @@
+ body {
+     background-color: #f2f2f2;
+ }
+ 
+ .top {
+     width: 100%;
+     height: 2.07rem;
+     background: url("../imgs/bg_top.jpg") 0 0 repeat;
+     background-size: 100%;
+ }
+ 
+ .container {
+     width: 100%;
+     font-size: 0.14rem;
+     padding-top: 0.15rem;
+     /* width: 100%; */
+     min-height: 2.2rem;
+     background: url("../imgs/bgg.jpg") 0 0 repeat;
+     background-size: 100%;
+     overflow: hidden;
+ }
+ 
+ .readme {
+     margin: 0 auto 0.25rem;
+     width: 3.1rem;
+     height: 0.7rem;
+     border: 0.02rem solid #000;
+     border-radius: 0.1rem;
+     padding: 0.2rem;
+     box-sizing: border-box;
+     position: relative;
+ }
+ 
+ .readmeTitle {
+     background: url("https://zjqq-1254806619.cos.ap-shanghai.myqcloud.com/xcvote/imgs/rule.png") 0 0 no-repeat;
+     background-size: 100%;
+     width: 1.3rem;
+     height: 0.37rem;
+     box-sizing: border-box;
+     position: absolute;
+     top: 0rem;
+     left: 0;
+     transform: translate(-20%, -50%);
+     color: #fff;
+     text-align: center;
+     line-height: 0.37rem;
+     font-size: 0.16rem;
+     font-weight: 700;
+ }
+ 
+ .cards-box {
+     /* padding-top: 0.15rem; */
+     width: 100%;
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ .card {
+     width: 1.2rem;
+     height: 1.8rem;
+     box-sizing: border-box;
+     /* overflow: hidden; */
+     background: url("https://zjqq-1254806619.cos.ap-shanghai.myqcloud.com/xcvote/imgs/card.png") 0 0 no-repeat;
+     background-size: 100% 100%;
+     margin-bottom: 0.5rem;
+     position: relative;
+ }
+ 
+ .container .card:nth-child(odd) {
+     margin-right: 0.3rem;
+ }
+ 
+ .c-title {
+     width: 100%;
+     height: 0.25rem;
+     line-height: 0.26rem;
+     text-align: center;
+ }
+ 
+ .card .mainPic {
+     height: 1.18rem;
+     width: 1.18rem;
+     display: block;
+     border: 1px solid #000;
+     overflow: hidden;
+ }
+ 
+ .card .mainPic img {
+     height: 100%;
+ }
+ 
+ .card .mainPic img:active {
+     transform: scale(1.2);
+ }
+ 
+ .small {
+     font-size: 0.1rem;
+     line-height: 0.13rem;
+     display: -webkit-box !important;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     word-break: break-all;
+     -webkit-box-orient: vertical;
+     -webkit-line-clamp: 2;
+ }
+ 
+ .info {
+     width: 100%;
+     height: 0.35rem;
+     line-height: 0.35rem;
+     font-size: 0.19rem;
+     font-weight: 700;
+ }
+ 
+ .info img {
+     width: 0.25rem;
+     height: 0.25rem;
+     display: block;
+     margin-top: 0.05rem;
+     margin-left: 0.15rem;
+     float: left;
+     transform: scale(1.1);
+ }
+ 
+ .info span {
+     float: right;
+     margin-right: 0.1rem;
+ }
+ 
+ .btn {
+     width: 1.01rem;
+     height: 0.29rem;
+     position: absolute;
+     bottom: -0.3rem;
+     left: 50%;
+     transform: translateX(-50%);
+     line-height: 0.32rem;
+     padding-left: 0.3rem;
+     background: url("https://zjqq-1254806619.cos.ap-shanghai.myqcloud.com/xcvote/imgs/ttyp.png") 0 0 no-repeat;
+     background-size: 100% 100%;
+     color: #fff;
+     font-size: 0.14rem;
+     font-weight: 700;
+ }
+ 
+ .btn:active {
+     color: #f46b69;
+ }
+ 
+ .cover {
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     left: 0;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     overflow: hidden;
+     z-index: 9;
+     opacity: 0.7;
+     background-color: #000;
+     display: none;
+ }
+ 
+ .details {
+     width: 3.65rem;
+     height: 5rem;
+     position: fixed;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -50%);
+     background-color: #fff;
+     z-index: 10;
+     padding: 0.07rem 0.06rem;
+     box-sizing: border-box;
+     display: none;
+ }
+ 
+ .d-img {
+     display: block;
+     width: 3.53rem;
+     height: 2.35rem;
+     overflow: hidden;
+ }
+ 
+ .d-img img {
+     width: 100%;
+     height: 100%;
+ }
+ 
+ .d-info {
+     height: 2.5rem;
+     width: 3.53rem;
+     border: 1px solid #000;
+     box-sizing: border-box;
+     margin-top: 0.01rem;
+     position: relative;
+     padding: 0.13rem 0.2rem;
+     position: relative;
+     font-size: 0.14rem;
+ }
+ 
+ .d-btn {
+     width: 1.58rem;
+     height: 0.46rem;
+     position: absolute;
+     bottom: -0.1rem;
+     right: 0;
+     line-height: 0.55rem;
+     padding-left: 0.3rem;
+     background: url("https://zjqq-1254806619.cos.ap-shanghai.myqcloud.com/xcvote/imgs/d-dtyp.png") 0 0 no-repeat;
+     background-size: cover;
+     color: #fff;
+     font-size: 0.18rem;
+     font-weight: 700;
+     /* z-index: 11; */
+     box-sizing: border-box;
+ }
+ 
+ .d-btn:active {
+     color: #f46b69;
+ }
+ 
+ .d-info h3 {
+     height: 0.3rem;
+     line-height: 0.3rem;
+     font-size: 0.16rem;
+     position: relative;
+     margin-left: 0.45rem;
+     margin-top: 0.2rem;
+     margin-bottom: 0.05rem;
+ }
+ 
+ .d-info h3 img {
+     display: block;
+     position: absolute;
+     width: 0.35rem;
+     left: -0.25rem;
+     bottom: -0.03rem;
+ }
+ 
+ .content {
+     text-indent: 2em;
+     font-size: 0.14rem;
+     line-height: 1.2;
+ }
+ 
+ .success {
+     width: 2.14rem;
+     height: 2.47rem;
+     position: fixed;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -50%);
+     z-index: 11;
+     display: none;
+ }
+ 
+ .success img {
+     width: 100%;
+ }
+ 
+ .music {
+     display: block;
+     position: fixed;
+     top: 0.15rem;
+     right: 0.15rem;
+     width: 0.4rem;
+     height: 0.4rem;
+     /* z-index: 20; */
+ }
+ 
+ .xuanzhuan {
+     animation: xuanzhuan 3s linear infinite;
+ }
+ 
+ @keyframes xuanzhuan {
+     0% {
+         transform: rotate(0)
+     }
+     100% {
+         transform: rotate(360deg)
+     }
+ }
+ 
+ .bg-music {
+     display: none;
+ }

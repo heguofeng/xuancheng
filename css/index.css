@@ -1,0 +1,52 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 6.67rem;
+    background: url('https://zjqq-1254806619.cos.ap-shanghai.myqcloud.com/xcvote/imgs/hello_bg.jpg') 0 0 no-repeat;
+    background-size: cover;
+}
+
+.start img {
+    z-index: 999;
+    width: 1.35rem;
+    height: 0.37rem;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scale(1.1);
+    bottom: 0.1rem;
+    box-sizing: border-box;
+}
+
+.start img:active {
+    transform: translateX(-50%) scale(1.2);
+    /* position: absolute;
+            left: 50%;
+            bottom: 0.1rem; */
+}
+
+.music {
+    display: block;
+    position: absolute;
+    top: 0.15rem;
+    right: 0.15rem;
+    width: 0.4rem;
+    height: 0.4rem;
+}
+
+.xuanzhuan {
+    animation: xuanzhuan 3s linear infinite;
+}
+
+@keyframes xuanzhuan {
+    0% {
+        transform: rotate(0)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.bg-music {
+    display: none;
+}

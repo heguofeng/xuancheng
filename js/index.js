@@ -1,5 +1,7 @@
 var fontSize;
 initpage();
+let musicFlag = true;
+playMusic();
 
 function initpage() {
     var view_width = document.getElementsByTagName('html')[0].getBoundingClientRect().width;
@@ -9,4 +11,24 @@ function initpage() {
 }
 window.onresize = function() {
     initpage();
+}
+$("#start").click(function() {
+    window.location.href = "./vote.html"
+});
+$("#music").click(function() {
+    playMusic();
+});
+
+//音乐播放
+function playMusic() {
+    let player = $("#bgMusic")[0];
+    if (musicFlag) {
+        $("#music").removeClass("xuanzhuan");
+        musicFlag = false;
+        player.pause();
+    } else {
+        $("#music").addClass("xuanzhuan");
+        musicFlag = true;
+        player.play();
+    }
 }

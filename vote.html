@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>宣城</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/weui.min.css">
+    <link rel="stylesheet" href="./css/jquery-weui.min.css">
+    <link rel="stylesheet" href="./css/vote.css">
+</head>
+
+<body>
+    <img class="music xuanzhuan" id="music" src="https://zjqq-1254806619.cos.ap-shanghai.myqcloud.com/xcvote/imgs/music.png" alt="音乐">
+    <audio class="bg-music" id="bgMusic" preload="auto" loop="loop">
+        <source src="./music.mp3">
+    </audio>
+    <div class="cover" id="cover"></div>
+    <div class="success" id="success">
+        <img src="https://zjqq-1254806619.cos.ap-shanghai.myqcloud.com/xcvote/imgs/success.png" alt="请关注">
+    </div>
+    <div class="details" id="details">
+        <div class="d-img" id="dImg">
+            <img src="./pics/崇德堂.JPG" alt="">
+        </div>
+        <div class="d-info">
+            <h3>
+                <img src="https://zjqq-1254806619.cos.ap-shanghai.myqcloud.com/xcvote/imgs/d-title.png" alt="">
+                <span id="dTitle"></span>
+            </h3>
+            <p class="content" id="content"></p>
+            <div class="d-btn" id="dBtn">投他一票</div>
+        </div>
+    </div>
+    <div class="top">
+
+    </div>
+    <div class="container">
+        <div class="readme">
+            <div class="readmeTitle">投票规则</div>
+            <p>一个微信一天有十票投票权，不得刷票</p>
+            <p>一个微信一天有十票投票权，不得刷票</p>
+        </div>
+        <div class="cards-box clearfix" id="cardBox">
+            <!-- 内容 -->
+        </div>
+    </div>
+    <div class="weui-loadmore">
+        <i class="weui-loading"></i>
+        <span class="weui-loadmore__tips">正在加载</span>
+    </div>
+</body>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/jquery-weui.min.js"></script>
+<script src="./js/vote.js"></script>
+
+</html>
