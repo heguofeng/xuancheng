@@ -21,8 +21,14 @@ let msg;
 $("#cardBox").on('click', ".mainPic", function() {
     let id = $(this).children('img').data("id");
     let data = dataArr[(id - 1)]; //对应的数据
-    console.log(data.vote_info.url)
-    $("#dImg img").attr("src", data.vote_info.url);
+    console.log(data.vote_info.url);
+    let url = "https://zjqq-1254806619.cos.ap-shanghai.myqcloud.com/xcvote/imgs/rectangle/" + data.vote_id + ".jpg";
+    // let img = new Image();
+    // img.src = url;
+    // img.onload = function() {
+    //         $("#dImg").append(img)
+    //     }
+    $("#dImg img").attr("src", url);
     $("#dImg img").attr("alt", data.vote_info.name);
     $("#dTitle").text(data.vote_info.name);
     $("#content").text(data.vote_info.intro);
@@ -58,7 +64,7 @@ $("#dBtn").click(function() {
 function vote(id) {
     $.showLoading();
     $.ajax({
-        url: "http://vote.zjqq.local/vote/vote",
+        url: "http://vote.zjqq.info/vote/vote",
         type: "GET",
         data: {
             "vote_id": id
@@ -69,21 +75,24 @@ function vote(id) {
             //成功
             if (res.code == 0) {
                 btnFlag = true;
-                $.toptip(res.msg, 1500, 'success');
+                $.toptip(res.msg, 3000, 'success');
                 //静态+1
-                let count = $(`.btn[data-id='${id}']`).prev().children("span").text();
-                $(`.btn[data-id='${id}']`).prev().children("span").text(count++);
-
+                let count = parseInt($(`.btn[data-id='${id}']`).prev().children("span").text());
+                $(`.btn[data-id='${id}']`).prev().children("span").text(++count);
             } else if (res.code == -1) { //投票不成功
                 btnFlag = false;
                 msg = res.msg;
                 $.toptip(res.msg, 'error');
                 $(".btn").css("color", "#505050");
                 $("#dBtn").css("color", "#505050");
-
             } else if (res.code == 1) { //需要关注
-                $.toptip(res.msg, 5000, 'warning');
-                $("#success").fadeIn("slow");
+                console.log(res.msg);
+                // $.toptip(res.msg, 5000, 'warning');
+                $("#success span").text(res.data.code);
+                $("#success").fadeIn();
+                $("#cover").fadeIn();
+                $("#cover").css("height", $(document).height());
+
             }
         },
         error: err => {
@@ -150,6 +159,7 @@ function loadPage() {
     console.log("当前页面是", pageNum)
     let box = $("#cardBox");
     for (let i = (10 * pageNum); i < (10 + 10 * pageNum); i++) {
+        let url = "https://zjqq-1254806619.cos.ap-shanghai.myqcloud.com/xcvote/imgs/square/" + dataArr[i].vote_id + ".jpg";
         let ret = /\（/
         if (ret.test(dataArr[i].vote_info.name)) {
             box.append(
@@ -157,10 +167,10 @@ function loadPage() {
                         <div class="card">
                             <div class="c-title small">${dataArr[i].vote_info.name}</div>
                             <div class="mainPic" id="mainPic">
-                                <img src="${dataArr[i].vote_info.url}" data-id="${dataArr[i].vote_id}" alt="${dataArr[i].vote_info.name}">
+                                <img src="${url}" data-id="${dataArr[i].vote_id}" alt="${dataArr[i].vote_info.name}">
                             </div>
                             <div class="info">
-                                <img src="./imgs/nums.png" alt="票数">
+                                <img src="https://zjqq-1254806619.cos.ap-shanghai.myqcloud.com/xcvote/imgs/nums.png" alt="票数">
                                 <span>${dataArr[i].vote_count}</span>
                             </div>
                             <div class="btn" data-id="${dataArr[i].vote_id}">投他一票</div>
@@ -173,10 +183,10 @@ function loadPage() {
                         <div class="card">
                             <div class="c-title">${dataArr[i].vote_info.name}</div>
                             <div class="mainPic" id="mainPic">
-                                <img src="${dataArr[i].vote_info.url}" data-id="${dataArr[i].vote_id}" alt="${dataArr[i].vote_info.name}">
+                                <img src="${url}" data-id="${dataArr[i].vote_id}" alt="${dataArr[i].vote_info.name}">
                             </div>
                             <div class="info">
-                                <img src="./imgs/nums.png" alt="票数">
+                                <img src="https://zjqq-1254806619.cos.ap-shanghai.myqcloud.com/xcvote/imgs/nums.png" alt="票数">
                                 <span>${dataArr[i].vote_count}</span>
                             </div>
                             <div class="btn" data-id="${dataArr[i].vote_id}">投他一票</div>

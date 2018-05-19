@@ -5,7 +5,7 @@
  .top {
      width: 100%;
      height: 2.07rem;
-     background: url("../imgs/bg_top.jpg") 0 0 repeat;
+     background: url("https://zjqq-1254806619.cos.ap-shanghai.myqcloud.com/xcvote/imgs/bg_top.jpg") 0 0 repeat;
      background-size: 100%;
  }
  
@@ -15,20 +15,22 @@
      padding-top: 0.15rem;
      /* width: 100%; */
      min-height: 2.2rem;
-     background: url("../imgs/bgg.jpg") 0 0 repeat;
+     background: url("https://zjqq-1254806619.cos.ap-shanghai.myqcloud.com/xcvote/imgs/bgg.jpg") 0 0 repeat;
      background-size: 100%;
      overflow: hidden;
  }
  
  .readme {
      margin: 0 auto 0.25rem;
-     width: 3.1rem;
-     height: 0.7rem;
+     width: 3.3rem;
+     /* height: 0.7rem; */
      border: 0.02rem solid #000;
      border-radius: 0.1rem;
-     padding: 0.2rem;
+     padding: 0.15rem;
      box-sizing: border-box;
      position: relative;
+     line-height: 1.4;
+     font-size: 0.12rem;
  }
  
  .readmeTitle {
@@ -255,12 +257,28 @@
      left: 50%;
      top: 50%;
      transform: translate(-50%, -50%);
-     z-index: 11;
+     z-index: 20;
+     overflow: hidden;
+     background: url("https://zjqq-1254806619.cos.ap-shanghai.myqcloud.com/xcvote/imgs/security-code.jpg") 0 0 no-repeat;
+     background-size: 100%;
+     text-align: center;
+     line-height: 1.8rem;
+     color: #f46b69;
+     font-size: 0.28rem;
+     font-weight: 700;
+     box-shadow: 1px 1px 10px 1px #4c4a4a;
+     border-radius: 10px;
      display: none;
  }
  
- .success img {
-     width: 100%;
+ .in_btn {
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -32%);
+     padding: 0.03rem 0.09rem;
+     font-size: 0.12rem;
+     line-height: 1.5;
  }
  
  .music {
